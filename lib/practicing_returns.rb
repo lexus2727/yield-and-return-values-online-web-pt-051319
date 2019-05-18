@@ -2,9 +2,12 @@ require 'pry'
 
 def hello(array)
   i = 0
+  #capture return values in new array
+  collection = []
   while i < array.length
   #binding.pry
-    yield(array[i])
+  #adding new values to array
+ collection << yield(array[i])
     i += 1
   end
 end
