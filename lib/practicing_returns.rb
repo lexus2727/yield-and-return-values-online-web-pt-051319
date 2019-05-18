@@ -2,11 +2,17 @@ require 'pry'
 
 def hello(array)
   i = 0
+  #capture return values in new array
+  collection = []
   while i < array.length
-    yield(array[i])
+  #binding.pry
+  #adding new values to array
+ collection << yield(array[i])
     i += 1
   end
+  #returning new array
+  collection
 end
 
+hello(["Tim", "Tom", "Jim"]) { |name| "Hi, #{name}" }
 
-hello(["Tim", "Tom", "Jim"]) { |name| puts "Hi, #{name}" }
