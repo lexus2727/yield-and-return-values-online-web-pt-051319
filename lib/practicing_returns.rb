@@ -10,6 +10,8 @@ def hello(array)
  collection << yield(array[i])
     i += 1
   end
+  #returning new array
+  collection
 end
 
 hello(["Tim", "Tom", "Jim"]) { |name| "Hi, #{name}" }
